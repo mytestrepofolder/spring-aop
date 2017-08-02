@@ -18,10 +18,10 @@ public class LoggingAspect {
 //		System.out.println(jp.toString());
 //	}
 	
-	/*@Before("allGetters()")
+	@Before("allGetters()")
 	public void secondloggingAdvice(){
 		System.out.println("Second Advice Executed.");
-	}*/
+	}
 	
 //	@After("args(name)")
 //	public void stringArgumentsMethods(String name){
@@ -53,11 +53,11 @@ public class LoggingAspect {
 		System.out.println("Exception Thrown is :"+ex);
 	}*/
 	
-/*	@Pointcut("execution(public * get*())")
+	@Pointcut("execution(public * get*())")
 	public void allGetters(){}
 	
 	
-	@Pointcut("execution(* * spring.aop.test.model.Circle.*(..))")
+/*	@Pointcut("execution(* * spring.aop.test.model.Circle.*(..))")
 	public void allCircleMethods(){}
 	
 	@Pointcut("within(spring.aop.test.model.Circle)")
