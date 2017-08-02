@@ -13,6 +13,7 @@ public class AppMain {
 		ShapeService sc = ctx.getBean("shapeService", ShapeService.class);
 		// sc.getCircle().setName("Plabon's Circle");
 		// sc.getCircle().setNAmeAndReturn("Plabon's Circle");
+		sc.getCircle().getName();
 		sc.getCircle();
 		((ClassPathXmlApplicationContext) ctx).close();
 	}
