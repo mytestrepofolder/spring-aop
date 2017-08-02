@@ -6,6 +6,10 @@ import spring.aop.test.model.Triangle;
 
 public class ShapeService {
 
+	@Override
+	public String toString() {
+		return String.format("ShapeService [triangle=%s, circle=%s]", triangle, circle);
+	}
 	private Triangle triangle;
 	
 	private Circle circle;
