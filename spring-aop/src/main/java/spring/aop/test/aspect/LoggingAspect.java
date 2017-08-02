@@ -44,7 +44,7 @@ public class LoggingAspect {
 			System.out.println("Running After Throwing Advice");
 		}
 		
-		System.out.println("After Finally");
+		System.out.println("Running After Finally");
 		return returnObj;
 	}
 	
