@@ -30,18 +30,18 @@ public class LoggingAspect {
 //	
 	@AfterReturning(pointcut="args(name)", returning="returnString")
 	public void stringAfterReturnAdvice(String name, String returnString ){
-		System.out.println("Method with Stiring arguments is called,  value is ="+name +" Return Value is "+returnString);
+		System.out.println("Method with String argument is called,  value is ="+name +" Return Value is "+returnString);
 	}
 	
 	//@Around("@annotation(spring.aop.test.aspect.Loggable)")
 	public Object aroundAdvice(ProceedingJoinPoint pjp){
 		Object returnObj = null;
 		try {
-			System.out.println("Before Advice");
+			System.out.println("Running Before Advice");
 			returnObj = pjp.proceed();
-			System.out.println("After Returning");
+			System.out.println("Running After Returning");
 		} catch (Throwable e) {
-			System.out.println("After Throwing Advice");
+			System.out.println("Running After Throwing Advice");
 		}
 		
 		System.out.println("After Finally");
